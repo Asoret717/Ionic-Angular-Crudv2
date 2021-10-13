@@ -38,7 +38,11 @@ export class SliderComponent implements OnInit {
   }
   
   ionViewWillEnter(){
+    try{
       this.slides.startAutoplay();
+    }catch{
+      console.log("Esta función falla la primera vez pero es necesaria");
+    }
   }
   
   slideChanged(){
