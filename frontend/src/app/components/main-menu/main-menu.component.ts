@@ -15,10 +15,10 @@ export class MainMenuComponent implements OnInit {
     this.router.navigateByUrl("/database");
   }
   goToContactPage(){
-    this.router.navigateByUrl("/contact");
+     this.router.navigateByUrl("/database");
   }
   goToLoginPage(){
-    this.router.navigateByUrl("/login");
+     this.router.navigateByUrl("/database");
   }
   goToMainPage(){
     this.router.navigateByUrl("/home");
