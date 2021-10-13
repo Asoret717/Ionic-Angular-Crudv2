@@ -1,0 +1,12 @@
+#arcade{
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    font-family: 'arcade';
+}
+
+@font-face {
+    font-family: 'arcade'; /*a name to be used later*/
+    src: url("/assets/fonts/ARCADECLASSIC.TTF");
+}

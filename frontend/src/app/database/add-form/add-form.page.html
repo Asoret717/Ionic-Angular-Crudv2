@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="arcade">Add Technology</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.name.errors?.required">
+      Name is required.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.name.errors?.minlength">
+      Min 3 chars long.
+    </span>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Price</ion-label>
+      <ion-input formControlName="price" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.price.errors?.required">
+      Price is required.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.price.errors?.pattern">
+      Enter valid number.
+    </span>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-button id="arcade" type="submit" color="primary" expand="block">Add</ion-button><br>
+        <ion-button id="arcade" style="--background:rgba(73, 24, 58, 0.671)" expand="block" (click)="goToDatabasePage()">Cancel</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,5 @@
+package org.ibraime.gaming.controllers;
+
+public class EmployeeController {
+
+}

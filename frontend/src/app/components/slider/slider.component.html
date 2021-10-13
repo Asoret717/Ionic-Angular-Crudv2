@@ -1,0 +1,10 @@
+<ion-content id="downDiv">
+  <ion-slides pager #Slider [options]="slideOptions" (ionSlideTouchEnd)="slideChanged()"
+    (ionSlidesDidLoad)="afterslidesLoad()" *ngIf="viewEntered">
+    <ion-slide *ngFor="let b of employee">
+      <p id="name">{{b.name}}</p>
+      <p id="description">{{b.description}}</p>
+      <img id="slide" src="/assets/images/employees/{{b.fileName}}">
+    </ion-slide>
+  </ion-slides>
+</ion-content>

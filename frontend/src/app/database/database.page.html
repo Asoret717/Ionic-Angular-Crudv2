@@ -1,0 +1,23 @@
+<app-main-menu></app-main-menu>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    <p>Technology</p>
+    <ion-button color="secondary" (click)="goToFormPage()">Add</ion-button>
+  </div>
+  <br>
+  <ion-grid id="Grid">
+    <ion-row><ion-col id="column">Products</ion-col><ion-col id="column">Prices</ion-col><ion-col id="column">Actions</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let b of gaming"> 
+      <ion-col id="column2">{{b.name}}</ion-col>   
+      <ion-col id="column2">{{b.price}}</ion-col>
+      <ion-col id="column2"><ion-button color="primary" (click)="goToFormPage2(b.id)">Modify</ion-button>
+        <ion-button color="secondary" (click)="deleteTechnology(b.id)">Delete</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content><br>
+<ion-button color="secondary" (click)="goToFormPage()">Add</ion-button>
+
+<app-footer></app-footer>

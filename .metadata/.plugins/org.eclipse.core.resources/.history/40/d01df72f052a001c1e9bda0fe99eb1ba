@@ -1,0 +1,11 @@
+package org.ibraime.gaming.entity.services;
+
+import java.util.List;
+
+import org.ibraime.gaming.entity.models.Employee;
+import org.ibraime.gaming.entity.models.Technology;
+
+public interface IEmployeeService {
+	public Employee get(long id);
+	public List<Employee> getAll();
+}

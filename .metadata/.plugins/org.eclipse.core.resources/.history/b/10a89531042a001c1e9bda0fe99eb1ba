@@ -1,0 +1,5 @@
+package org.ibraime.gaming.entity.services;
+
+public interface IEmployeeService {
+
+}

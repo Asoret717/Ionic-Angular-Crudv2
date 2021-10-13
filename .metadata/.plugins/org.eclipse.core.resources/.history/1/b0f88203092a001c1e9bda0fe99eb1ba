@@ -1,0 +1,29 @@
+package org.ibraime.gaming.controllers;
+
+import java.util.List;
+
+import org.ibraime.gaming.entity.models.Employee;
+import org.ibraime.gaming.entity.services.ITechnologyService;
+import org.ibraime.gaming.entity.services.IEmployeeService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@CrossOrigin(origins = "http://localhost:8100")
+@RestController
+public class EmployeeController {
+	@Autowired
+	IEmployeeService employeeService;
+	
+	@GetMapping("/employee")
+	public List<Employee> getAllEmployee(){
+		return employeeService.getAll();
+	}
+}

@@ -1,0 +1,46 @@
+package org.ibraime.gaming.controllers;
+
+import java.util.List;
+
+import org.ibraime.gaming.entity.models.Technology;
+import org.ibraime.gaming.entity.services.ITechnologyService;
+import org.ibraime.gaming.entity.services.IEmployeeService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@CrossOrigin(origins = "http://localhost:8100")
+@RestController
+public class TechnologyController {
+	@Autowired
+	ITechnologyService technologyService;
+	IEmployeeService employeeService;
+	
+	@GetMapping("/gaming")
+	public List<Technology> getAllGaming(){
+		return technologyService.getAll();
+	}
+	@GetMapping("/gaming/{id}")
+	public Technology getOne(@PathVariable(value = "id") long id){
+		return technologyService.get(id);
+	}
+	@PostMapping("/gaming")
+	public void post(Technology technology){
+		technologyService.post(technology);
+	}
+	@PutMapping("/gaming/{id}")
+	public void put(Technology technology, @PathVariable(value = "id") long id){
+		technologyService.put(technology, id);
+	}
+	@DeleteMapping("/gaming/{id}")
+	public void delete(@PathVariable(value = "id") long id) {
+		technologyService.delete(id);
+	}
+}
