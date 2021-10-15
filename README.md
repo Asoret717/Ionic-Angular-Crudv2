@@ -18,7 +18,10 @@ mofidy: Opens the modify form with the values of the row.
 The forms checks if you introduced a valid name, with a min length of 3, and if the price is a number, it accepts decimals it also adds the dollar symbol.
 
 # Slider
-Finally as an extra I added a slider: -Which moves itself automatically. -When you slide it manually after you stop doing it continues to auto slide. -If you go to other page and come back it starts to slide again.
+Finally as an extra I added a slider:
+-Which moves itself automatically. 
+-When you slide it manually after you stop doing it continues to auto slide. 
+-If you go to other page and come back it starts to slide again.
 
 This took many functions to make it work.
 
