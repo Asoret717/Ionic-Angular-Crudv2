@@ -1,7 +1,7 @@
 # Ionic-Angular-Crud
 Phone app with Ionic and java Swing
 
-Start the frontend with "ionic serve --lab" it's made for mobile phones.
+Start the frontend with <span style="color:blue;">"ionic serve --lab"</span> it's made for mobile phones.
 
 
 # CRUD Options
